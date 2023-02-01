@@ -1,6 +1,6 @@
 # Pintwist
 - ERD
-<img width="400" alt="Pintwist ERD made using dbDiagram" src="https://github.com/nss-evening-cohort-21/InCRUDibles/issues/24#issue-1565300975">
+<img width="400" alt="Pintwist ERD made using dbDiagram" src="https://user-images.githubusercontent.com/114124374/215928144-6dfd3030-ff2c-483a-af68-0a2a02ea3eec.png">
 
 # React/Next.js Template
 
