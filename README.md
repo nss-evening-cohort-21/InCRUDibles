@@ -1,3 +1,7 @@
+#Pintwist
+- ERD
+<img width="400" alt="Pintwist ERD made using dbDiagram" src="https://github.com/nss-evening-cohort-21/InCRUDibles/issues/24">
+
 # React/Next.js Template
 
 [See Live Demo of this Template](https://drt-next-js-template.netlify.app/)
