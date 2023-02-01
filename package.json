@@ -1,8 +1,8 @@
 {
-  "name": "next-firebase-starter",
+  "name": "pintwist",
   "private": true,
   "version": "1.0.0",
-  "author": "Trinity Christiana",
+  "author": "Ryan Bigelow, Angie Gonzalez, Wesley Vance, Dro Demby, DeAndre Hill",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
