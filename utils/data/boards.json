@@ -1,0 +1,42 @@
+{
+  "-NN9hu4Cp3rLynuqPzhA": {
+    "uid": null,
+    "name": "Pannier",
+    "image": "http://dummyimage.com/236x100.png/5fa2dd/ffffff",
+    "description": "vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia",
+    "isPublic": true,
+    "firebaseKey": "-NN9hu4Cp3rLynuqPzhA"
+  },
+  "-NN9hu4FNVNOPc4dLWYX": {
+    "uid": null,
+    "name": "Overhold",
+    "image": "http://dummyimage.com/205x100.png/cc0000/ffffff",
+    "description": "lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit",
+    "isPublic": true,
+    "firebaseKey":  "-NN9hu4FNVNOPc4dLWYX"
+  },
+  "-NN9hu4HSV93fdxW3QpY": {
+    "uid": null,
+    "name": "Alphazap",
+    "image": "http://dummyimage.com/113x100.png/ff4444/ffffff",
+    "description": "consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum",
+    "isPublic": true,
+    "firebaseKey": "-NN9hu4HSV93fdxW3QpY"
+  },
+  "-NN9hu4Ks_roVG18Wgui": {
+    "uid": null,
+    "name": "Ventosanzap",
+    "image": "http://dummyimage.com/152x100.png/dddddd/000000",
+    "description": "sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget",
+    "isPublic": false,
+    "firebaseKey": "-NN9hu4Ks_roVG18Wgui"
+  },
+  "-NN9hu4Mr5E3vFmzwExT": {
+    "uid": null,
+    "name": "Greenlam",
+    "image": "http://dummyimage.com/204x100.png/cc0000/ffffff",
+    "description": "cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum",
+    "isPublic": false,
+    "firebaseKey": "-NN9hu4Mr5E3vFmzwExT"
+  }
+}
