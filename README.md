@@ -1,8 +1,11 @@
 # Pintwist
 - [Pintwist ERD](https://dbdiagram.io/d/63d9b220296d97641d7d82da)
+
 <img width="400" alt="Pintwist ERD made using dbDiagram" src="https://user-images.githubusercontent.com/114124374/215928144-6dfd3030-ff2c-483a-af68-0a2a02ea3eec.png">
+
 - [Pintwist Flowchart](https://docs.google.com/presentation/d/14K_78brmF34xRmJyRNIkDXiTfvUEtoJqHEhZ1VRxHyk/edit?usp=sharing)
 - [Figma Wireframe](https://www.figma.com/file/WFw7x0oOBQEP4dRlcJmP9n/View-Pins%2FView-Community-Pins?node-id=0%3A1&t=jirkmuw0a5ElQ3E9-0)
+
 <img width="400" alt="Pintwist ERD made using dbDiagram" src="https://user-images.githubusercontent.com/114124374/215930863-2d30d1c5-e98f-45f2-8680-153095f64ff4.png">
 
 # React/Next.js Template
