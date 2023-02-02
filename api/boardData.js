@@ -1,6 +1,6 @@
-import client from '../utils/client';
+import { clientCredentials } from '../utils/client';
 
-const dbUrl = client.databaseURL;
+const dbUrl = clientCredentials.databaseURL;
 
 // FIXME:  GET ALL BOARDS
 const getBoards = (uid) => new Promise((resolve, reject) => {
