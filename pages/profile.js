@@ -1,7 +1,8 @@
 import React from 'react';
+import UserProfile from '../components/UserProfile';
 
-export default function boardData() {
+export default function ProfilePage() {
   return (
-    <div>boardData</div>
+    <div><UserProfile /></div>
   );
 }

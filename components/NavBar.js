@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import Link from 'next/link';
-import { signOut } from '../utils/auth';
 import SearchBar from './SearchBar';
 
 export default function NavBar() {
@@ -48,9 +47,6 @@ export default function NavBar() {
               </Link>
             </li>
             <SearchBar />
-            <button type="button" className="btn btn-danger" onClick={signOut}>
-              Sign Out
-            </button>
           </ul>
         </div>
       </div>
