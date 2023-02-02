@@ -46,8 +46,9 @@ code
 ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)
 
 ## Contributors
-- [Wesley Vance](https://github.com/wesleybvance)
-- [Dro Demby](https://github.com/champayneblk)
-- [DeAndre Hill](https://github.com/Dede-Git)
-- [Angie Gonzalez](https://github.com/AngieMGonzalez)
-- [Ryan Bigelow](https://github.com/ryanmbigelow)
+
+- [Dro Demby aka Dr. Dro](https://github.com/champayneblk)
+- [DeAndre Hill aka Lil Dede](https://github.com/Dede-Git)
+- [Angie Gonzalez aka Angie Badass](https://github.com/AngieMGonzalez)
+- [Ryan Bigelow aka Ryan Thee $tallion](https://github.com/ryanmbigelow)
+- [Wesley Vance aka A Tribe Called Wes aka TCDub](https://github.com/wesleybvance)
