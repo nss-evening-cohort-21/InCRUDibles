@@ -20,3 +20,14 @@ a {
 body {
   background-color: #88effd;
 }
+
+#navbar {
+  display: flex;
+}
+
+#searchBar {
+  display: flex;
+  gap: 6.25%;
+  margin-right: 6.25%;
+  margin-left: 2.75%;
+}

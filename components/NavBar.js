@@ -2,11 +2,12 @@
 import React from 'react';
 import Link from 'next/link';
 import { signOut } from '../utils/auth';
+import SearchBar from './SearchBar';
 
 export default function NavBar() {
   return (
     <nav className="navbar navbar-expand-md navbar-dark bg-dark">
-      <div className="container-fluid">
+      <div className="container-fluid" id="navbar">
         <Link passHref href="/">
           <a className="navbar-brand" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01">
             PinTwist
@@ -46,6 +47,7 @@ export default function NavBar() {
                 </a>
               </Link>
             </li>
+            <SearchBar />
             <button type="button" className="btn btn-danger" onClick={signOut}>
               Sign Out
             </button>
