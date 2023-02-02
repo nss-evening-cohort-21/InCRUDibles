@@ -1,4 +1,5 @@
 # Pintwist
+[View The App Here](https://pintwist.netlify.app/)
 
 ## Get Started
 - [React Template Startup Readme](./templateReadMe.md)
@@ -16,7 +17,7 @@
 
 
 ## Relevant Links
-- [Check out the deployed site](#your-link)
+- [Check out the deployed site](https://pintwist.netlify.app/)
 - [Figma Wireframes](https://www.figma.com/file/WFw7x0oOBQEP4dRlcJmP9n/View-Pins%2FView-Community-Pins?node-id=0%3A1&t=jirkmuw0a5ElQ3E9-0)
 
 <img width="400" alt="Pintwist Wireframe made using Figma" src="https://user-images.githubusercontent.com/114124374/215930863-2d30d1c5-e98f-45f2-8680-153095f64ff4.png">
