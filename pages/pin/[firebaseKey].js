@@ -25,7 +25,7 @@ export default function ViewPin() {
         </div>
         <div className="text-white ms-5 details">
           <h5>
-            {pinDetails.name} by {pinDetails.boardObject?.name} {pinDetails.boardObject?.isPublic ? '🔒' : ''}
+            {pinDetails.name} {pinDetails.boardObject?.isPublic ? '🔒' : ''}
           </h5>
           <p>{pinDetails.description || ''}
           </p>
