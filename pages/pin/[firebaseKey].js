@@ -2,16 +2,16 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { viewBoardDetails } from '../../api/mergedData';
+import { viewPinDetails } from '../../api/mergedData';
 
-export default function ViewPin() {
+export default function ViewBoard() {
   const [pinDetails, setPinDetails] = useState({});
   const router = useRouter;
 
   const { firebaseKey } = router.query;
 
   useEffect(() => {
-    viewBoardDetails(firebaseKey).then(setPinDetails);
+    viewPinDetails(firebaseKey).then(setPinDetails);
   }, [firebaseKey]);
 
   return (
