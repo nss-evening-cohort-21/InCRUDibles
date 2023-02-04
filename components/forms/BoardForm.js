@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import { Button, FloatingLabel, Form } from 'react-bootstrap';
 import PropTypes from 'prop-types';
+import Head from 'next/head';
 import { createBoard, updateBoard } from '../../api/boardData';
 import { useAuth } from '../../utils/context/authContext';
 
@@ -46,6 +47,7 @@ export default function BoardForm({ obj }) {
 
   return (
     <div className="board-form-container">
+      <Head><title>{obj.firebaseKey ? `Update ${obj.name}` : 'Create Board'}</title></Head>
       <Form onSubmit={handleSubmit}>
         <h2 className="member-form-text">{obj.firebaseKey ? 'Update' : 'Create'} Board</h2>
         <FloatingLabel
