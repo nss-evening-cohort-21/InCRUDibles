@@ -52,7 +52,7 @@ function PinForm({ obj }) {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <h2 className="text-white mt-5">{obj.firebaseKey ? 'Update' : 'Create'} Book</h2>
+      <h2 className="text-white mt-5">{obj.firebaseKey ? 'Update' : 'Create'} Pin</h2>
 
       {/* name */}
       <FloatingLabel controlId="floatingInput1" label="Pin Name" className="mb-3">
@@ -104,7 +104,7 @@ function PinForm({ obj }) {
       </FloatingLabel>
 
       {/* DESCRIPTION TEXTAREA  */}
-      <FloatingLabel controlId="floatingTextarea" label="Book Description" className="mb-3">
+      <FloatingLabel controlId="floatingTextarea" label="Pin Description" className="mb-3">
         <Form.Control
           as="textarea"
           placeholder="Description"
@@ -133,7 +133,7 @@ function PinForm({ obj }) {
       />
 
       {/* SUBMIT BUTTON  */}
-      <Button variant="primary" type="submit">{obj.firebaseKey ? 'Update' : 'Create'} Book</Button>
+      <Button variant="primary" type="submit">{obj.firebaseKey ? 'Update' : 'Create'} Pin</Button>
     </Form>
   );
 }
