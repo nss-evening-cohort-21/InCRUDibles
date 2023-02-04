@@ -10,6 +10,7 @@ const initialStateBF = {
   name: '',
   description: '',
   image: '',
+  isPublic: false,
 };
 
 export default function BoardForm({ obj }) {
@@ -47,9 +48,9 @@ export default function BoardForm({ obj }) {
 
   return (
     <div className="board-form-container">
-      <Head><title>{obj.firebaseKey ? `Update ${obj.name}` : 'Create Board'}</title></Head>
+      <Head><title>{obj.firebaseKey ? `Update ${obj.name} Board` : 'Create Board'}</title></Head>
       <Form onSubmit={handleSubmit}>
-        <h2 className="member-form-text">{obj.firebaseKey ? 'Update' : 'Create'} Board</h2>
+        <h2 className="member-form-text">{obj.firebaseKey ? `Update ${obj.name}` : 'Create Board'}</h2>
         <FloatingLabel
           controlId="floatingInput1"
           label="Board Name"
