@@ -1,27 +1,34 @@
-import { signOut } from '../utils/auth';
+import { useEffect, useState } from 'react';
+import { getPins } from '../api/pinData';
+import PinCard from '../components/PinCard';
 import { useAuth } from '../utils/context/authContext';
 
 function Home() {
+  // TODO: Set a state for pins
+  const [pins, setPins] = useState([]);
+
+  // TODO: Get user ID using useAuth Hook
   const { user } = useAuth();
 
+  // TODO: create a function that makes the API call to get all the pins
+  const getAllThePins = () => {
+    getPins(user.uid).then(setPins);
+  };
+
+  // TODO: make the call to the API to get all the pins on component render
+  useEffect(() => {
+    getAllThePins();
+  }, []);
   return (
-    <>
-      <div
-        className="text-center d-flex flex-column justify-content-center align-content-center"
-        style={{
-          height: '90vh',
-          padding: '30px',
-          maxWidth: '400px',
-          margin: '0 auto',
-        }}
-      >
-        <h1>Hello {user.displayName}! </h1>
-        <p>Click the button below to logout!</p>
-        <button className="btn btn-danger btn-lg copy-btn" type="button" onClick={signOut}>
-          Sign Out
-        </button>
+    <div className="text-center my-4">
+      <div className="d-flex flex-wrap">
+        {/* TODO: map over pins here using PinCard component */}
+        {pins.map((pin) => (
+          <PinCard key={pin.firebaseKey} pinObj={pin} onUpdate={getAllThePins} />
+        ))}
       </div>
-    </>
+
+    </div>
   );
 }
 
