@@ -39,7 +39,7 @@ const getSingleBoard = (firebaseKey) => new Promise((resolve, reject) => {
   fetch(`${dbUrl}/boards/${firebaseKey}.json`, {
     method: 'GET',
     headers: {
-      'Content-Type': 'application.json',
+      'Content-Type': 'application/json',
     }, // you technically do not need the options object for GET requests, but using it here for consistency
   })
     .then((response) => response.json())

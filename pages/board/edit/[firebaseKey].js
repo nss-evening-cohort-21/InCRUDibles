@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import { getSingleBoard } from '../../../api/boardData';
@@ -17,11 +16,6 @@ export default function UpdateBoard() {
   }, [firebaseKey]);
 
   return (
-    <>
-      <Head>
-        <title>Update Board</title>
-
-      </Head><BoardForm obj={editBoard} />
-    </>
+    <BoardForm obj={editBoard} />
   );
 }
