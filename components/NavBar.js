@@ -46,6 +46,14 @@ export default function NavBar() {
                 </a>
               </Link>
             </li>
+            {/* COMMENT OUT BELOW AFTER TESTING BOARD FORMS  */}
+            <li className="nav-item">
+              <Link passHref href="/board/new">
+                <a className="nav-link">
+                  New Board
+                </a>
+              </Link>
+            </li>
             <SearchBar />
           </ul>
         </div>

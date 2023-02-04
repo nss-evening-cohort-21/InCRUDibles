@@ -1,7 +1,14 @@
+import Head from 'next/head';
 import React from 'react';
+import BoardForm from '../../components/forms/BoardForm';
 
-export default function boardData() {
+export default function CreateBoard() {
   return (
-    <div>boardData</div>
+    <>
+      <Head>
+        <title>Add New Board</title>
+      </Head>
+      <BoardForm />
+    </>
   );
 }
