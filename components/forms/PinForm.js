@@ -46,8 +46,11 @@ function PinForm({ obj }) {
         .then(() => router.push(`/pin/${obj.firebaseKey}`));
     } else {
       const payload = { ...formInput, uid: user.uid };
-      createPin(payload).then(() => {
-        router.push('/');
+      createPin(payload).then(({ name }) => {
+        const patchPayloadFBK = { firebaseKey: name };
+        updatePin(patchPayloadFBK).then(() => {
+          router.push('/');
+        });
       });
     }
   };
@@ -81,7 +84,7 @@ function PinForm({ obj }) {
       </FloatingLabel>
 
       {/* URL  */}
-      <FloatingLabel controlId="floatingInput3" label="url" className="mb-3">
+      <FloatingLabel controlId="floatingInput3" label="pinned website url" className="mb-3">
         <Form.Control
           type="url"
           placeholder="url"
