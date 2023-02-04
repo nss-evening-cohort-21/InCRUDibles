@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
 import { getBoards } from '../api/boardData';
 import BoardCard from '../components/BoardCard';
