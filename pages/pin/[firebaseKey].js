@@ -6,7 +6,7 @@ import { viewPinDetails } from '../../api/mergedData';
 
 export default function ViewPin() {
   const [pinDetails, setPinDetails] = useState({});
-  const router = useRouter;
+  const router = useRouter();
 
   const { firebaseKey } = router.query;
 
