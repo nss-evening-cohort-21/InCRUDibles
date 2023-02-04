@@ -25,13 +25,13 @@ export default function ViewBoard() {
         </div>
         <div className="text-white ms-5 details">
           <h5>
-            {pinDetails.name} by {pinDetails.boardObject?.name} {pinDetails.boardObject?.isPublic ? '🤍' : ''}
+            {pinDetails.name} by {pinDetails.boardObject?.name} {pinDetails.boardObject?.isPublic ? '🔒' : ''}
           </h5>
           <p>{pinDetails.description || ''}
           </p>
           <hr />
           <p>
-            {pinDetails.isPublic ? '🤍' : ''}
+            {pinDetails.isPublic ? '🔒' : ''}
           </p>
         </div>
       </div>
