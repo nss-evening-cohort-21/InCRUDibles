@@ -4,7 +4,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { viewPinDetails } from '../../api/mergedData';
 
-export default function ViewBoard() {
+export default function ViewPin() {
   const [pinDetails, setPinDetails] = useState({});
   const router = useRouter;
 
