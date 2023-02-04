@@ -24,7 +24,7 @@
 
 - [ERD](https://dbdiagram.io/d/63d9b220296d97641d7d82da)
 
-<img width="400" alt="Pintwist ERD made using dbDiagram" src="https://user-images.githubusercontent.com/114124374/215928144-6dfd3030-ff2c-483a-af68-0a2a02ea3eec.png">
+<img width="400" alt="Pintwist ERD made using dbDiagram" src="https://user-images.githubusercontent.com/114124374/216207529-5a8829d8-b70b-40bc-86f5-d419523997b7.png">
 
 - [Flowchart](https://docs.google.com/presentation/d/14K_78brmF34xRmJyRNIkDXiTfvUEtoJqHEhZ1VRxHyk/edit?usp=sharing)
 

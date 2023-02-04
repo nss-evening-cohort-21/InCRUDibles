@@ -22,11 +22,13 @@ function PinForm({ obj }) {
   const [boards, setBoards] = useState([]);
   const router = useRouter();
   const { user } = useAuth();
+
   useEffect(() => {
     getBoards(user.uid).then(setBoards);
     // conditional for UPDATE/EDIT
     if (obj.firebaseKey) setFormInput(obj);
   }, [obj, user]);
+
   const handleChange = (e) => {
     console.warn('handleChange');
     const { name, value } = e.target;
@@ -52,7 +54,7 @@ function PinForm({ obj }) {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <h2 className="text-white mt-5">{obj.firebaseKey ? 'Update' : 'Create'} Book</h2>
+      <h2 className="text-white mt-5">{obj.firebaseKey ? 'Update' : 'Create'} Pin</h2>
 
       {/* name */}
       <FloatingLabel controlId="floatingInput1" label="Pin Name" className="mb-3">
@@ -67,12 +69,37 @@ function PinForm({ obj }) {
       </FloatingLabel>
 
       {/* IMAGE INPUT  */}
-      <FloatingLabel controlId="floatingInput2" label="Pin Image" className="mb-3">
+      <FloatingLabel controlId="floatingInput2" label="Pin Image Url" className="mb-3">
         <Form.Control
           type="url"
           placeholder="Enter an image url"
           name="image"
           value={formInput.image}
+          onChange={handleChange}
+          required
+        />
+      </FloatingLabel>
+
+      {/* URL  */}
+      <FloatingLabel controlId="floatingInput3" label="url" className="mb-3">
+        <Form.Control
+          type="url"
+          placeholder="url"
+          name="url"
+          value={formInput.url}
+          onChange={handleChange}
+          required
+        />
+      </FloatingLabel>
+
+      {/* DESCRIPTION TEXTAREA  */}
+      <FloatingLabel controlId="floatingTextarea" label="Pin Description" className="mb-3">
+        <Form.Control
+          as="textarea"
+          placeholder="Description"
+          style={{ height: '100px' }}
+          name="description"
+          value={formInput.description}
           onChange={handleChange}
           required
         />
@@ -103,19 +130,6 @@ function PinForm({ obj }) {
         </Form.Select>
       </FloatingLabel>
 
-      {/* DESCRIPTION TEXTAREA  */}
-      <FloatingLabel controlId="floatingTextarea" label="Book Description" className="mb-3">
-        <Form.Control
-          as="textarea"
-          placeholder="Description"
-          style={{ height: '100px' }}
-          name="description"
-          value={formInput.description}
-          onChange={handleChange}
-          required
-        />
-      </FloatingLabel>
-
       {/* isPublic: A WAY TO HANDLE UPDATES FOR TOGGLES, RADIOS, ETC  */}
       <Form.Check
         className="text-white mb-3"
@@ -133,7 +147,7 @@ function PinForm({ obj }) {
       />
 
       {/* SUBMIT BUTTON  */}
-      <Button variant="primary" type="submit">{obj.firebaseKey ? 'Update' : 'Create'} Book</Button>
+      <Button variant="primary" type="submit">{obj.firebaseKey ? 'Update' : 'Create'} Pin</Button>
     </Form>
   );
 }
