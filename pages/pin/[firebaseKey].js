@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { viewBoardDetails } from '../../api/mergedData';
+import { viewPinDetails } from '../../api/mergedData';
 
 export default function ViewPin() {
   const [pinDetails, setPinDetails] = useState({});
@@ -11,7 +11,7 @@ export default function ViewPin() {
   const { firebaseKey } = router.query;
 
   useEffect(() => {
-    viewBoardDetails(firebaseKey).then(setPinDetails);
+    viewPinDetails(firebaseKey).then(setPinDetails);
   }, [firebaseKey]);
 
   return (
