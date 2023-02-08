@@ -2,7 +2,7 @@ import { clientCredentials } from '../utils/client';
 
 const dbUrl = clientCredentials.databaseURL;
 
-// FIXME:  GET ALL BOARDS
+// FIXME:  GET ALL BOARDS - by user
 const getBoards = (uid) => new Promise((resolve, reject) => {
   fetch(`${dbUrl}/boards.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
@@ -85,6 +85,25 @@ const getPinsByBoard = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const getAllPubBoards = () => new Promise((resolve, reject) => {
+  fetch(`${dbUrl}/boards.json`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data) {
+        const publicBoards = Object.values(data).filter((item) => item.isPublic === true);
+        resolve(publicBoards);
+      } else {
+        resolve([]);
+      }
+    })
+    .catch(reject);
+});
+
 export {
   getBoards,
   getSingleBoard,
@@ -92,4 +111,5 @@ export {
   updateBoard,
   deleteSingleBoard,
   getPinsByBoard,
+  getAllPubBoards,
 };
