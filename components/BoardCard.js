@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, Button } from 'react-bootstrap';
 import Link from 'next/link';
-import { deleteSingleBoard } from '../api/boardData';
+import { deleteBoardPins } from '../api/mergedData';
 
 export default function BoardCard({ boardObj, onUpdate }) {
   const deleteThisBoard = () => {
     if (window.confirm(`Delete ${boardObj.name}?`)) {
-      deleteSingleBoard(boardObj.firebaseKey).then(() => onUpdate());
+      deleteBoardPins(boardObj.firebaseKey).then(() => onUpdate());
     }
   };
 
