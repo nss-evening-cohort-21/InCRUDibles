@@ -150,7 +150,7 @@ function PinForm({ obj }) {
       />
 
       {/* SUBMIT BUTTON  */}
-      <Button variant="primary" type="submit">{obj.firebaseKey ? 'Update' : 'Create'} Pin</Button>
+      <Button variant="outline-dark" className="m-2" type="submit">{obj.firebaseKey ? 'Update' : 'Create'} Pin</Button>
     </Form>
   );
 }

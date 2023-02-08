@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 import { Card, Button } from 'react-bootstrap';
 import Link from 'next/link';
 import { deleteBoardPins } from '../api/mergedData';
+import { useAuth } from '../utils/context/authContext';
 
 export default function BoardCard({ boardObj, onUpdate }) {
+  const { user } = useAuth();
   const deleteThisBoard = () => {
     if (window.confirm(`Delete ${boardObj.name}?`)) {
       deleteBoardPins(boardObj.firebaseKey).then(() => onUpdate());
@@ -21,14 +23,19 @@ export default function BoardCard({ boardObj, onUpdate }) {
           <Card.Body>{boardObj.description}</Card.Body>
         </Card.Body>
         <Link href={`/board/${boardObj.firebaseKey}`} passHref>
-          <Button variant="primary" className="m-2">VIEW</Button>
+          <Button variant="outline-dark" className="m-2">VIEW</Button>
         </Link>
         <Link href={`/board/edit/${boardObj.firebaseKey}`} passHref>
-          <Button variant="info">EDIT</Button>
+          {boardObj.uid === user.uid ? (<Button variant="outline-dark" className="m-2">EDIT</Button>) : '' }
         </Link>
-        <Button variant="danger" onClick={deleteThisBoard} className="m-2">
-          DELETE
-        </Button>
+        <>
+          {boardObj.uid === user.uid ? (
+            <Button variant="outline-dark" className="m-2" onClick={deleteThisBoard}>
+              DELETE
+            </Button>
+          )
+            : ''}
+        </>
       </Card>
     </div>
   );

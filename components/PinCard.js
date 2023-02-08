@@ -4,8 +4,10 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Link from 'next/link';
 import { deleteSinglePin } from '../api/pinData';
+import { useAuth } from '../utils/context/authContext';
 
 function PinCard({ pinObj, onUpdate }) {
+  const { user } = useAuth();
   const deletePin = () => {
     if (window.confirm(`Delete ${pinObj.name}?`)) {
       deleteSinglePin(pinObj.firebaseKey).then(() => onUpdate());
@@ -19,15 +21,20 @@ function PinCard({ pinObj, onUpdate }) {
         <Card.Title>{pinObj.name}</Card.Title>
         {/* DYNAMIC LINK TO VIEW THE PIN DETAILS  */}
         <Link href={`/pin/${pinObj.firebaseKey}`} passHref>
-          <Button variant="primary" className="m-2">VIEW</Button>
+          <Button variant="outline-dark" className="m-2">VIEW</Button>
         </Link>
         {/* DYNAMIC LINK TO EDIT THE PIN DETAILS  */}
         <Link href={`/pin/edit/${pinObj.firebaseKey}`} passHref>
-          <Button variant="info">EDIT</Button>
+          {pinObj.uid === user.uid ? (<Button variant="outline-dark" className="m-2">EDIT</Button>) : '' }
         </Link>
-        <Button variant="danger" onClick={deletePin} className="m-2">
-          DELETE
-        </Button>
+        <>
+          {pinObj.uid === user.uid ? (
+            <Button variant="outline-dark" className="m-2" onClick={deletePin}>
+              DELETE
+            </Button>
+          )
+            : ''}
+        </>
       </Card.Body>
     </Card>
   );
@@ -42,6 +49,7 @@ PinCard.propTypes = {
     isPublic: PropTypes.bool,
     firebaseKey: PropTypes.string,
     url: PropTypes.string,
+    uid: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
 };

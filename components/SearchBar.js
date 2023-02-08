@@ -18,7 +18,7 @@ export default function SearchBar() {
     <div>
       <Form onSubmit={handleSubmit} id="searchBar">
         <input className="form-control" type="text" placeholder="Search your pins" onChange={handleChange} value={searchInput} />
-        <Button variant="success" type="submit" size="sm">Search</Button>
+        <Button variant="outline-dark" className="m-2" type="submit" size="sm">Search</Button>
       </Form>
     </div>
   );
