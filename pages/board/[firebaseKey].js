@@ -5,11 +5,12 @@ import Link from 'next/link';
 import { viewBoardDetails } from '../../api/mergedData';
 import { getPinsByBoard } from '../../api/boardData';
 import PinCard from '../../components/PinCard';
+import { useAuth } from '../../utils/context/authContext';
 
 export default function ViewBoard() {
   const [boardDetails, setBoardDetails] = useState({});
   const router = useRouter();
-
+  const { user } = useAuth();
   const { firebaseKey } = router.query;
 
   useEffect(() => {
@@ -29,7 +30,7 @@ export default function ViewBoard() {
             <Card.Title>{`${boardDetails.name}`}</Card.Title>
             <Card.Text>{boardDetails.description}</Card.Text>
             <Link href={`edit/${boardDetails.firebaseKey}`} passHref>
-              <Button variant="outline-dark" className="m-2">Edit</Button>
+              {boardDetails.uid === user.uid ? (<Button variant="outline-dark" className="m-2">Edit</Button>) : '' }
             </Link>
           </Card.Body>
         </Card>

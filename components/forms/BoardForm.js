@@ -107,7 +107,7 @@ export default function BoardForm({ obj }) {
             }));
           }}
         />
-        <Button type="submit" variant="light">{obj.firebaseKey ? 'Update' : 'Create'}</Button>
+        <Button type="submit" variant="outline-dark" className="m-2">{obj.firebaseKey ? 'Update' : 'Create'}</Button>
       </Form>
     </div>
   );

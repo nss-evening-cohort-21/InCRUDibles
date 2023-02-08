@@ -13,7 +13,7 @@ export default function UserProfile() {
       <h2>{user.displayName}</h2>
       <h5>{user.email}</h5>
       <h5>Last Login: {user.metadata.lastSignInTime}</h5>
-      <Button type="button" size="lg" className="copy-btn btn btn-danger" onClick={signOut}>
+      <Button type="button" size="lg" cvariant="outline-dark" className="m-2" onClick={signOut}>
         Sign Out
       </Button>
     </div>
