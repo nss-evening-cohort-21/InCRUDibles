@@ -39,3 +39,44 @@ body {
   flex-direction: column;
   margin: 2%;
 }
+
+/* WBV PIN DETAIL STYLING START  */
+
+.PD-container {
+  display: flex;
+  flex-direction: row;
+  border-radius: 25px;
+  background-color: #FFFFFF;
+  border: 1px solid #826251;
+  padding: 0px 0px 0px 0px;
+  size: auto;
+}
+
+.PD-photo-container {
+  flex-shrink: 1;
+}
+
+.PD-photo {
+  border-radius: 25px 0px 0px 25px;
+  size: auto;
+}
+
+.PD-detail-container {
+  flex-grow: 2;
+  border-left: 1px solid #826251;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 50px 40px 50px;
+}
+
+.PD-pin-name {
+  text-align: center;
+  font-size: 35px;
+}
+
+.PD-lock {
+  text-align: center;
+  font-size: 50px;
+}
+
+/* WBV PIN DETAIL STYLING END  */
