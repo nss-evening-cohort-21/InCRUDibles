@@ -49,16 +49,20 @@ body {
   background-color: #FFFFFF;
   border: 1px solid #826251;
   padding: 0px 0px 0px 0px;
-  size: auto;
+  width: 80%;
 }
 
 .PD-photo-container {
   flex-shrink: 1;
 }
 
+.PD-photo-container img {
+  object-fit: cover;
+}
+
 .PD-photo {
   border-radius: 25px 0px 0px 25px;
-  size: auto;
+  height: 100%;
 }
 
 .PD-detail-container {
