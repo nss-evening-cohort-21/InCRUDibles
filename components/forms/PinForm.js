@@ -60,11 +60,11 @@ function PinForm({ obj }) {
     <>
       <Head><title>{obj.firebaseKey ? `Update ${obj.name} Pin` : 'Create Pin'}</title></Head>
 
-      <Form onSubmit={handleSubmit}>
-        <h2 className="text-white mt-5 text-center">{obj.firebaseKey ? 'Update' : 'Create'} Pin</h2>
+      <Form onSubmit={handleSubmit} className="text-color-drkblu">
+        <h2 className="mt-5 text-center">{obj.firebaseKey ? 'Update' : 'Create'} Pin</h2>
         <div className="mt-5" />
         {/* name */}
-        <div className="text-white">Name</div>
+        <div className="">Name</div>
         <FloatingLabel controlId="floatingInput1" label="Pin Name" className="mb-3">
           <Form.Control
             type="text"
@@ -77,7 +77,7 @@ function PinForm({ obj }) {
         </FloatingLabel>
 
         {/* URL  */}
-        <div className="text-white">Website</div>
+        <div className="">Website</div>
         <FloatingLabel controlId="floatingInput3" label="Pin's Website" className="mb-3">
           <Form.Control
             type="url"
@@ -90,7 +90,7 @@ function PinForm({ obj }) {
         </FloatingLabel>
 
         {/* Board SELECT */}
-        <div className="text-white">Select Board</div>
+        <div className="">Select Board</div>
         <FloatingLabel controlId="floatingSelect" label="Board">
           <Form.Select
             placeholder="Pick a Board"
@@ -114,7 +114,7 @@ function PinForm({ obj }) {
         </FloatingLabel>
 
         {/* IMAGE INPUT  */}
-        <div className="text-white">Image URL</div>
+        <div className="">Image URL</div>
         <FloatingLabel controlId="floatingInput2" label="Pin Image Url" className="mb-3">
           <Form.Control
             type="url"
@@ -127,7 +127,7 @@ function PinForm({ obj }) {
         </FloatingLabel>
 
         {/* DESCRIPTION TEXTAREA  */}
-        <div className="text-white">Description</div>
+        <div className="">Description</div>
         <FloatingLabel controlId="floatingTextarea" label="Pin Description" className="mb-3">
           <Form.Control
             as="textarea"
@@ -142,7 +142,7 @@ function PinForm({ obj }) {
 
         {/* isPublic: TOGGLES/RADIOS */}
         <Form.Check
-          className="text-white mb-3"
+          className="mb-3"
           type="switch"
           id="isPublic"
           name="isPublic"
@@ -157,7 +157,7 @@ function PinForm({ obj }) {
         />
 
         {/* SUBMIT BUTTON  */}
-        <Button variant="outline-dark" className="text-white m-2" type="submit">{obj.firebaseKey ? 'Update' : 'Create'} Pin</Button>
+        <Button variant="outline-dark" className="m-2 text-color-drkblu" type="submit">{obj.firebaseKey ? 'Update' : 'Create'} Pin</Button>
       </Form>
     </>
   );
