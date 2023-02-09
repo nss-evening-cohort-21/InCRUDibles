@@ -19,19 +19,20 @@ export default function ViewPin() {
       <Head>
         <title> View {pinDetails.name} </title>
       </Head>
-      <div>
-        <div className="d-flex flex-column">
-          <img src={pinDetails.image} alt={pinDetails.name} style={{ width: '300px' }} />
+      <div className="PD-container">
+        <div className="PD-photo-container">
+          <a href={pinDetails.url}><img className="PD-photo" src={pinDetails.image} alt={pinDetails.name} /></a>
         </div>
-        <div className="text-white ms-5 details">
-          <h5>
-            {pinDetails.name} {pinDetails.boardObject?.isPublic ? '🔒' : ''}
+        <div className="PD-detail-container">
+          <h5 className="PD-pin-name">
+            {pinDetails.name} {pinDetails.boardObject?.isPublic ? '🔓' : '🔒'}
           </h5>
+          <hr />
           <p>{pinDetails.description || ''}
           </p>
           <hr />
-          <p>
-            {pinDetails.isPublic ? '🔒' : ''}
+          <p className="PD-lock">
+            {pinDetails.isPublic ? '🔓' : '🔒'}
           </p>
         </div>
       </div>
