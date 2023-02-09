@@ -18,11 +18,11 @@ a {
 }
 
 body {
-  background-color: #568EA3;
+  background-color: #c3e6fa;
 }
 
 #navbar {
-  display: flex;
+  background-color: #4ABCFD;
 }
 
 #searchBar {
