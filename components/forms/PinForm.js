@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { Button } from 'react-bootstrap';
+import Head from 'next/head';
 import { useAuth } from '../../utils/context/authContext';
 import { getBoards } from '../../api/boardData';
 import { createPin, updatePin } from '../../api/pinData';
@@ -56,107 +57,109 @@ function PinForm({ obj }) {
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <h2 className="text-white mt-5 text-center">{obj.firebaseKey ? 'Update' : 'Create'} Pin</h2>
-      <div className="mt-5" />
-      {/* name */}
-      <div className="text-white">Name</div>
-      <FloatingLabel controlId="floatingInput1" label="Pin Name" className="mb-3">
-        <Form.Control
-          type="text"
-          placeholder="Enter a name..."
-          name="name"
-          value={formInput.name}
-          onChange={handleChange}
-          required
-        />
-      </FloatingLabel>
+    <>
+      <Head><title>{obj.firebaseKey ? `Update ${obj.name} Pin` : 'Create Pin'}</title></Head>
 
-      {/* URL  */}
-      <div className="text-white">Website</div>
-      <FloatingLabel controlId="floatingInput3" label="Pin's Website" className="mb-3">
-        <Form.Control
-          type="url"
-          placeholder="website"
-          name="url"
-          value={formInput.url}
-          onChange={handleChange}
-          required
-        />
-      </FloatingLabel>
+      <Form onSubmit={handleSubmit}>
+        <h2 className="text-white mt-5 text-center">{obj.firebaseKey ? 'Update' : 'Create'} Pin</h2>
+        <div className="mt-5" />
+        {/* name */}
+        <div className="text-white">Name</div>
+        <FloatingLabel controlId="floatingInput1" label="Pin Name" className="mb-3">
+          <Form.Control
+            type="text"
+            placeholder="Enter a name..."
+            name="name"
+            value={formInput.name}
+            onChange={handleChange}
+            required
+          />
+        </FloatingLabel>
 
-      {/* Board SELECT */}
-      <div className="text-white">Select Board</div>
-      <FloatingLabel controlId="floatingSelect" label="Board">
-        <Form.Select
-          placeholder="Pick a Board"
-          aria-label="Board"
-          name="board_id"
-          onChange={handleChange}
-          className="mb-3"
-          value={formInput.board_id}
-          required
-        >
-          <option value="">Select a Board</option>
-          {
-            boards.map((board) => (
+        {/* URL  */}
+        <div className="text-white">Website</div>
+        <FloatingLabel controlId="floatingInput3" label="Pin's Website" className="mb-3">
+          <Form.Control
+            type="url"
+            placeholder="website"
+            name="url"
+            value={formInput.url}
+            onChange={handleChange}
+            required
+          />
+        </FloatingLabel>
+
+        {/* Board SELECT */}
+        <div className="text-white">Select Board</div>
+        <FloatingLabel controlId="floatingSelect" label="Board">
+          <Form.Select
+            placeholder="Pick a Board"
+            aria-label="Board"
+            name="board_id"
+            onChange={handleChange}
+            className="mb-3"
+            value={formInput.board_id}
+            required
+          >
+            <option value="">Select a Board</option>
+            {boards.map((board) => (
               <option
                 key={board.firebaseKey}
                 value={board.firebaseKey}
               >
                 {board.name}
               </option>
-            ))
-          }
-        </Form.Select>
-      </FloatingLabel>
+            ))}
+          </Form.Select>
+        </FloatingLabel>
 
-      {/* IMAGE INPUT  */}
-      <div className="text-white">Image URL</div>
-      <FloatingLabel controlId="floatingInput2" label="Pin Image Url" className="mb-3">
-        <Form.Control
-          type="url"
-          placeholder="Enter an image url"
-          name="image"
-          value={formInput.image}
-          onChange={handleChange}
-          required
+        {/* IMAGE INPUT  */}
+        <div className="text-white">Image URL</div>
+        <FloatingLabel controlId="floatingInput2" label="Pin Image Url" className="mb-3">
+          <Form.Control
+            type="url"
+            placeholder="Enter an image url"
+            name="image"
+            value={formInput.image}
+            onChange={handleChange}
+            required
+          />
+        </FloatingLabel>
+
+        {/* DESCRIPTION TEXTAREA  */}
+        <div className="text-white">Description</div>
+        <FloatingLabel controlId="floatingTextarea" label="Pin Description" className="mb-3">
+          <Form.Control
+            as="textarea"
+            placeholder="Description"
+            style={{ height: '100px' }}
+            name="description"
+            value={formInput.description}
+            onChange={handleChange}
+            required
+          />
+        </FloatingLabel>
+
+        {/* isPublic: TOGGLES/RADIOS */}
+        <Form.Check
+          className="text-white mb-3"
+          type="switch"
+          id="isPublic"
+          name="isPublic"
+          label="Is Public?"
+          checked={formInput.isPublic}
+          onChange={(e) => {
+            setFormInput((prevState) => ({
+              ...prevState,
+              isPublic: e.target.checked,
+            }));
+          }}
         />
-      </FloatingLabel>
 
-      {/* DESCRIPTION TEXTAREA  */}
-      <div className="text-white">Description</div>
-      <FloatingLabel controlId="floatingTextarea" label="Pin Description" className="mb-3">
-        <Form.Control
-          as="textarea"
-          placeholder="Description"
-          style={{ height: '100px' }}
-          name="description"
-          value={formInput.description}
-          onChange={handleChange}
-          required
-        />
-      </FloatingLabel>
-
-      {/* isPublic: A WAY TO HANDLE UPDATES FOR TOGGLES, RADIOS, ETC  */}
-      <Form.Check
-        className="text-white mb-3"
-        type="switch"
-        id="isPublic"
-        name="isPublic"
-        label="Is Public?"
-        checked={formInput.isPublic}
-        onChange={(e) => {
-          setFormInput((prevState) => ({
-            ...prevState,
-            isPublic: e.target.checked,
-          }));
-        }}
-      />
-
-      {/* SUBMIT BUTTON  */}
-      <Button variant="outline-dark" className="text-white m-2" type="submit">{obj.firebaseKey ? 'Update' : 'Create'} Pin</Button>
-    </Form>
+        {/* SUBMIT BUTTON  */}
+        <Button variant="outline-dark" className="text-white m-2" type="submit">{obj.firebaseKey ? 'Update' : 'Create'} Pin</Button>
+      </Form>
+    </>
   );
 }
 

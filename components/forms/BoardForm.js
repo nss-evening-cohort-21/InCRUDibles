@@ -49,8 +49,11 @@ export default function BoardForm({ obj }) {
   return (
     <div className="board-form-container">
       <Head><title>{obj.firebaseKey ? `Update ${obj.name} Board` : 'Create Board'}</title></Head>
+
       <Form onSubmit={handleSubmit}>
-        <h2 className="member-form-text">{obj.firebaseKey ? `Update ${obj.name}` : 'Create Board'}</h2>
+        <h2 className="mt-5 text-white text-center">{obj.firebaseKey ? `Update ${obj.name}` : 'Create Board'}</h2>
+        <div className="mt-5" />
+        <div className="text-white"> Board Name</div>
         <FloatingLabel
           controlId="floatingInput1"
           label="Board Name"
@@ -58,30 +61,33 @@ export default function BoardForm({ obj }) {
         >
           <Form.Control
             type="text"
-            placeholder="Name"
+            placeholder="Board Name"
             name="name"
             value={formInput.name}
             onChange={handleChange}
             required
           />
         </FloatingLabel>
+        <div className="text-white">Description</div>
         <FloatingLabel
-          controlId="floatingInput1"
+          controlId="floatingInput2"
           label="Board Description"
           className="mb-3"
         >
           <Form.Control
             type="text"
             placeholder="Description"
+            style={{ height: '100px' }}
             name="description"
             value={formInput.description}
             onChange={handleChange}
             required
           />
         </FloatingLabel>
+        <div className="text-white">Board Cover Image URL</div>
         <FloatingLabel
-          controlId="floatingInput1"
-          label="Board Cover Image URL"
+          controlId="floatingInput3"
+          label="Image URL"
           className="mb-3"
         >
           <Form.Control
