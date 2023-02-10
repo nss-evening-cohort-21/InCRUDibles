@@ -48,8 +48,7 @@ body {
   border-radius: 25px;
   background-color: #FFFFFF;
   border: 1px solid #826251;
-  padding: 0px 0px 0px 0px;
-  width: 80%;
+  max-width: 100%;
 }
 
 .PD-photo-container {
@@ -57,12 +56,18 @@ body {
 }
 
 .PD-photo-container img {
-  object-fit: cover;
+  max-width: 100%; 
+  display: block; 
+  height: auto; 
 }
 
 .PD-photo {
   border-radius: 25px 0px 0px 25px;
-  height: 100%;
+  min-width: 300px;
+}
+
+.PD-desc {
+  display: inline-block;
 }
 
 .PD-detail-container {
