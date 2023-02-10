@@ -50,10 +50,10 @@ export default function BoardForm({ obj }) {
     <div className="board-form-container">
       <Head><title>{obj.firebaseKey ? `Update ${obj.name} Board` : 'Create Board'}</title></Head>
 
-      <Form onSubmit={handleSubmit}>
-        <h2 className="mt-5 text-white text-center">{obj.firebaseKey ? `Update ${obj.name}` : 'Create Board'}</h2>
+      <Form onSubmit={handleSubmit} className="text-color-drkblu">
+        <h2 className="mt-5 text-center">{obj.firebaseKey ? `Update ${obj.name}` : 'Create Board'}</h2>
         <div className="mt-5" />
-        <div className="text-white"> Board Name</div>
+        <div className=""> Board Name</div>
         <FloatingLabel
           controlId="floatingInput1"
           label="Board Name"
@@ -68,7 +68,7 @@ export default function BoardForm({ obj }) {
             required
           />
         </FloatingLabel>
-        <div className="text-white">Description</div>
+        <div className="">Description</div>
         <FloatingLabel
           controlId="floatingInput2"
           label="Board Description"
@@ -84,7 +84,7 @@ export default function BoardForm({ obj }) {
             required
           />
         </FloatingLabel>
-        <div className="text-white">Board Cover Image URL</div>
+        <div className="">Board Cover Image URL</div>
         <FloatingLabel
           controlId="floatingInput3"
           label="Image URL"
@@ -100,7 +100,7 @@ export default function BoardForm({ obj }) {
           />
         </FloatingLabel>
         <Form.Check
-          className="text-white mb-3"
+          className="mb-3"
           type="switch"
           id="privacy"
           name="isPublic"
@@ -113,7 +113,7 @@ export default function BoardForm({ obj }) {
             }));
           }}
         />
-        <Button type="submit" variant="outline-dark" className="m-2">{obj.firebaseKey ? 'Update' : 'Create'}</Button>
+        <Button type="submit" variant="outline-dark" className="m-2 text-color-drkblu">{obj.firebaseKey ? 'Update' : 'Create'}</Button>
       </Form>
     </div>
   );
