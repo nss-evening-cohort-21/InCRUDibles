@@ -15,7 +15,7 @@ export default function BoardCard({ boardObj, onUpdate }) {
 
   return (
     <div>
-      <Card>
+      <Card style={{ width: '18rem', margin: '10px' }}>
         <Card.Img variant="top" src={boardObj.image} alt={boardObj.name} style={{ height: '400px' }} />
         <Card.Body>
           <Card.Title>{boardObj.name}</Card.Title>

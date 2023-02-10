@@ -19,7 +19,7 @@ export default function ProfilePage() {
   return (
     <>
       <div><UserProfile /></div>
-      <div>
+      <div className="d-flex flex-wrap">
         {boards.map((board) => (
           <BoardCard key={board.firebaseKey} boardObj={board} onUpdate={getAllTheBoards} />
         ))}

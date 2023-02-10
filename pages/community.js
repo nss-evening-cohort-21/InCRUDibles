@@ -13,7 +13,7 @@ export default function Community() {
     getAllPublicBoards();
   }, []);
   return (
-    <div className="public-card-container">
+    <div className="public-card-container, d-flex flex-wrap">
       {publicBoards.map((pubboard) => (
         <BoardCard key={pubboard.firebaseKey} boardObj={pubboard} onUpdate={getAllPublicBoards} />
       ))}

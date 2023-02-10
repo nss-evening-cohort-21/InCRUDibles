@@ -94,3 +94,9 @@ body {
 .text-color-drkblu {
   color: #568EA3;
 }
+
+/* BOARD CARDS */
+#boardcardcontainer {
+  display: flex;
+  flex-direction: column;
+}
