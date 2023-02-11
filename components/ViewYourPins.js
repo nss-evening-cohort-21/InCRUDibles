@@ -21,7 +21,7 @@ export default function ViewYourPins() {
 
   if (user.uid === boardDetails.uid) {
     return (
-      <div>
+      <div className="d-flex flex-wrap">
         {boardDetails.boardPins?.map((pin) => (
           <PinCard key={pin.firebaseKey} pinObj={pin} onUpdate={getAllPinsByBoard} />
         ))}
@@ -29,7 +29,7 @@ export default function ViewYourPins() {
     );
   }
   return (
-    <div>
+    <div className="d-flex flex-wrap">
       {boardDetails.boardPins?.filter((pin) => pin.isPublic).map((pin) => (
         <PinCard key={pin.firebaseKey} pinObj={pin} onUpdate={getAllPinsByBoard} />
       ))}
