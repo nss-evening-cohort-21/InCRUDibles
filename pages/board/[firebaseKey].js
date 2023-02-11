@@ -1,6 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import { Button, Card } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import Link from 'next/link';
 import { viewBoardDetails } from '../../api/mergedData';
 import { useAuth } from '../../utils/context/authContext';
@@ -17,20 +18,22 @@ export default function ViewBoard() {
   }, [firebaseKey]);
 
   return (
-    <div>
-      <div>
-        <Card style={{ width: '50rem' }}>
-          <Card.Img variant="top" src={boardDetails.image} />
-          <Card.Body>
-            <Card.Title>{`${boardDetails.name}`}</Card.Title>
-            <Card.Text>{boardDetails.description}</Card.Text>
+    <div className="BD-container">
+      <div className="BD-detail-cont-bg" style={{ backgroundImage: `url(${boardDetails.image})` }}>
+        <div className="BD-detail-cont">
+          {/* <div className="BD-photo-cont"><img className="BD-photo" src={boardDetails.image} alt={boardDetails.name} /></div> */}
+          <div className="BD-name-cont"><h2 className="BD-name">{boardDetails.name}</h2></div>
+          <div className="BD-desc-cont"><h5 className="BD-description">{boardDetails.description}</h5></div>
+          <div className="BD-edit-cont">
             <Link href={`edit/${boardDetails.firebaseKey}`} passHref>
-              {boardDetails.uid === user.uid ? (<Button variant="outline-dark" className="m-2">Edit</Button>) : '' }
+              {boardDetails.uid === user.uid ? (<Button variant="dark" className="m-2">Edit {boardDetails.name} </Button>) : '' }
             </Link>
-          </Card.Body>
-        </Card>
+          </div>
+        </div>
       </div>
-      <ViewYourPins />
+      <div className="BD-pin-container">
+       <ViewYourPins />
+      </div>
     </div>
   );
 }

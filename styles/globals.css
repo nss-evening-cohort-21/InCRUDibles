@@ -50,6 +50,7 @@ body {
   background-color: #FFFFFF;
   border: 1px solid #826251;
   max-width: 100%;
+  margin: 100px 0px 0px 0px;
 }
 
 .PD-photo-container {
@@ -128,3 +129,76 @@ body {
   justify-content: center;
   margin-top: 20px;
 }
+
+/* WV BOARD DETAILS STYLING START  */
+
+.BD-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.BD-name-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 40px 0px 0px;
+}
+
+.BD-detail-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  background-color: #FFFFFF;
+  opacity: .97;
+  background-size: cover;
+  background-position: center;
+  padding: 0px 100px 0px 100px;
+  border-radius: 0px;
+  margin: 40px 0px 0px 0px;
+}
+
+.BD-detail-cont-bg {
+  background-size: cover;
+  background-position: center;
+  padding: 20px 100px 50px 100px;
+  border-radius: 100px;
+  margin: 40px 0px 0px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.BD-desc-cont {
+  padding: 50px;
+}
+
+.BD-description {
+  border: 1px solid black;
+  padding: 30px;
+}
+
+.BD-photo-cont {
+  display: flex;
+  align-items: center;
+  padding: 0px 50px 0px 0px 
+}
+
+.BD-photo {
+  max-height: 180px;
+  border-radius: 10px;
+}
+
+.BD-edit-cont {
+  padding: 60px 0px 0px 0px;
+}
+
+.BD-pin-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 50px 0px 0px 0px;
+  justify-content: center;
+}
+
+
+/* WV BOARD DETAILS STYLING END  */
