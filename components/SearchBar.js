@@ -13,6 +13,7 @@ export default function SearchBar() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (searchInput !== '') router.push(`/search/${searchInput}`);
+    setSearchInput('');
   };
   return (
     <div>
