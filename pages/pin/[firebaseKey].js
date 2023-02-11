@@ -21,14 +21,14 @@ export default function ViewPin() {
       </Head>
       <div className="PD-container">
         <div className="PD-photo-container">
-          <a href={pinDetails.url}><img className="PD-photo" src={pinDetails.image} alt={pinDetails.name} /></a>
+          <a href={pinDetails.url} target="_tab"><img className="PD-photo" src={pinDetails.image} alt={pinDetails.name} /></a>
         </div>
         <div className="PD-detail-container">
           <h5 className="PD-pin-name">
-            {pinDetails.name} {pinDetails.boardObject?.isPublic ? '🔓' : '🔒'}
+            {pinDetails.name}
           </h5>
           <hr />
-          <p>{pinDetails.description || ''}
+          <p className="PD-desc">{pinDetails.description || ''}
           </p>
           <hr />
           <p className="PD-lock">
