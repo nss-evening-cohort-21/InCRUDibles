@@ -100,3 +100,12 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+#navbarprofile {
+  border-radius: 50%;
+}
+
+#navbar > * {
+  margin-left: 2%;
+  margin-right: 2%;
+}
