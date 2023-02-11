@@ -3,9 +3,8 @@ import { useRouter } from 'next/router';
 import { Button, Card } from 'react-bootstrap';
 import Link from 'next/link';
 import { viewBoardDetails } from '../../api/mergedData';
-import { getPinsByBoard } from '../../api/boardData';
-import PinCard from '../../components/PinCard';
 import { useAuth } from '../../utils/context/authContext';
+import ViewYourPins from '../../components/ViewYourPins';
 
 export default function ViewBoard() {
   const [boardDetails, setBoardDetails] = useState({});
@@ -17,13 +16,9 @@ export default function ViewBoard() {
     viewBoardDetails(firebaseKey).then(setBoardDetails);
   }, [firebaseKey]);
 
-  const getAllPinsByBoard = () => {
-    getPinsByBoard(firebaseKey);
-  };
-
   return (
     <div>
-      <div id="viewboardcontainer">
+      <div>
         <Card style={{ width: '50rem' }}>
           <Card.Img variant="top" src={boardDetails.image} />
           <Card.Body>
@@ -35,11 +30,7 @@ export default function ViewBoard() {
           </Card.Body>
         </Card>
       </div>
-      <div className="d-flex flex-wrap">
-        {boardDetails.boardPins?.map((pin) => (
-          <PinCard key={pin.firebaseKey} pinObj={pin} onUpdate={getAllPinsByBoard} />
-        ))}
-      </div>
+      <ViewYourPins />
     </div>
   );
 }
