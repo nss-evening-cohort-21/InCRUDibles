@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import { Button, Card } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import Link from 'next/link';
 import { viewBoardDetails } from '../../api/mergedData';
 import { getPinsByBoard } from '../../api/boardData';
@@ -22,24 +22,23 @@ export default function ViewBoard() {
   };
 
   return (
-    <div>
-      <div id="viewboardcontainer">
-        <Card style={{ width: '50rem' }}>
-          <Card.Img variant="top" src={boardDetails.image} />
-          <Card.Body>
-            <Card.Title>{`${boardDetails.name}`}</Card.Title>
-            <Card.Text>{boardDetails.description}</Card.Text>
-            <Link href={`edit/${boardDetails.firebaseKey}`} passHref>
-              {boardDetails.uid === user.uid ? (<Button variant="outline-dark" className="m-2">Edit</Button>) : '' }
-            </Link>
-          </Card.Body>
-        </Card>
+
+    <div className="BD-container">
+      <div className="BD-detail-cont">
+        <div className="BD-name-cont"><h2 className="BD-name">{boardDetails.name}</h2></div>
+        <div className="BD-desc-cont"><h5 className="BD-description">{boardDetails.description}</h5></div>
+        <div className="BD-edit-cont">
+          <Link href={`edit/${boardDetails.firebaseKey}`} passHref>
+            {boardDetails.uid === user.uid ? (<Button variant="dark" className="m-2">Edit {boardDetails.name} </Button>) : '' }
+          </Link>
+        </div>
       </div>
-      <div className="d-flex flex-wrap">
+      <div className="BD-pin-container">
         {boardDetails.boardPins?.map((pin) => (
           <PinCard key={pin.firebaseKey} pinObj={pin} onUpdate={getAllPinsByBoard} />
         ))}
       </div>
+
     </div>
   );
 }
