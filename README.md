@@ -3,6 +3,11 @@
 
 ## Get Started
 - [React Template Startup Readme](./templateReadMe.md)
+- Or You can clone it and start editing here
+
+`$ git clone git@github.com:nss-evening-cohort-21/InCRUDibles.git` 
+
+`$ cd InCRUDibles`
 
 ## About the user
 - The ideal user for Pintwist is anyone trying to keep track of their favorite collection of images
@@ -14,6 +19,7 @@
 - Private and public pins/boards
 
 ## Video Walkthrough of Pintwist
+https://www.loom.com/share/5ef7fe33711c4e73a703befe41bb85c1
 
 
 ## Relevant Links
