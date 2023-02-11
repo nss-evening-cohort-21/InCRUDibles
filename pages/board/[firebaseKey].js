@@ -23,7 +23,7 @@ export default function ViewBoard() {
 
   return (
     <div>
-      <div>
+      <div id="viewboardcontainer">
         <Card style={{ width: '50rem' }}>
           <Card.Img variant="top" src={boardDetails.image} />
           <Card.Body>
@@ -35,7 +35,7 @@ export default function ViewBoard() {
           </Card.Body>
         </Card>
       </div>
-      <div>
+      <div className="d-flex flex-wrap">
         {boardDetails.boardPins?.map((pin) => (
           <PinCard key={pin.firebaseKey} pinObj={pin} onUpdate={getAllPinsByBoard} />
         ))}

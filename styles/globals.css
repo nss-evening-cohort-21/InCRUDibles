@@ -23,6 +23,7 @@ body {
 
 #navbar {
   background-color: #4ABCFD;
+  height: 65px;
 }
 
 #searchBar {
@@ -108,4 +109,22 @@ body {
 #navbar > * {
   margin-left: 2%;
   margin-right: 2%;
+}
+
+#profilepicture {
+  border-radius: 50%;
+}
+
+#viewboardcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#profilepins {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
 }
