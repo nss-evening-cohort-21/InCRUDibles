@@ -18,7 +18,7 @@ export default function NavBar() {
   return (
     <Navbar expand="lg" id="navbar">
       <Container fluid>
-        <Image src={logo} alt="PinTwist Logo" width={100} height={50} />
+        <Nav.Link href="/"><Image src={logo} alt="PinTwist Logo" width={100} height={50} /></Nav.Link>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
