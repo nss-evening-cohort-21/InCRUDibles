@@ -32,7 +32,7 @@ export default function ViewBoard() {
         </div>
       </div>
       <div className="BD-pin-container">
-       <ViewYourPins />
+        <ViewYourPins />
       </div>
     </div>
   );
