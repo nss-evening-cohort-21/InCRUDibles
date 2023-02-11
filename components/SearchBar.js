@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
-import { Form, Button } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
 
 export default function SearchBar() {
   const [searchInput, setSearchInput] = useState('');
@@ -18,8 +18,7 @@ export default function SearchBar() {
   return (
     <div>
       <Form onSubmit={handleSubmit} id="searchBar">
-        <input className="form-control" type="text" placeholder="Search your pins" onChange={handleChange} value={searchInput} />
-        <Button variant="outline-dark" className="m-2" type="submit" size="sm">Search</Button>
+        <input className="form-control" type="text" placeholder="Search your pins" onChange={handleChange} value={searchInput} style={{ width: '300px', height: '40px' }} />
       </Form>
     </div>
   );

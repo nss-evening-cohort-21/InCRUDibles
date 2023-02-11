@@ -10,8 +10,11 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from '../images/logo.png';
 import SearchBar from './SearchBar';
+import { useAuth } from '../utils/context/authContext';
 
 export default function NavBar() {
+  const { user } = useAuth();
+
   return (
     <Navbar expand="lg" id="navbar">
       <Container fluid>
@@ -33,7 +36,9 @@ export default function NavBar() {
             </NavDropdown>
           </Nav>
           <SearchBar className="d-flex" />
-          <Nav.Link href="/profile">Profile</Nav.Link>
+          <Nav.Link href="/profile">
+            <Image src={user.photoURL} alt="userURL" width="50px" height="50px" id="navbarprofile" />
+          </Nav.Link>
         </Navbar.Collapse>
       </Container>
     </Navbar>

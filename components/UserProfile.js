@@ -9,7 +9,7 @@ export default function UserProfile() {
 
   return (
     <div id="profileSection">
-      <Image src={user.photoURL} alt="userURL" width="200px" height="200px" />
+      <Image src={user.photoURL} alt="userURL" width="200px" height="200px" id="profilepicture" />
       <h2>{user.displayName}</h2>
       <h5>{user.email}</h5>
       <h5>Last Login: {user.metadata.lastSignInTime}</h5>
