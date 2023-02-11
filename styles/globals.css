@@ -164,6 +164,17 @@ body {
   padding: 30px;
 }
 
+.BD-photo-cont {
+  display: flex;
+  align-items: center;
+  padding: 0px 50px 0px 0px 
+}
+
+.BD-photo {
+  max-height: 180px;
+  border-radius: 10px;
+}
+
 .BD-edit-cont {
   padding: 60px 0px 0px 0px;
 }
