@@ -34,7 +34,7 @@ code
 ```
 
 ## Project Screenshots
-<img width="1148" alt="Pintwist Home" src="![image](https://user-images.githubusercontent.com/114124374/218232164-e926bcc1-e2f0-4c58-b63f-dca98d978a07.png)">
+<img width="1148" alt="Pintwist Home" src="https://user-images.githubusercontent.com/114124374/218232164-e926bcc1-e2f0-4c58-b63f-dca98d978a07.png">
 
 ### Tech/framework used
 **Built with** 
