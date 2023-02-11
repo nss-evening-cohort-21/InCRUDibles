@@ -23,9 +23,9 @@
 <img width="400" alt="Pintwist Wireframe made using Figma" src="https://user-images.githubusercontent.com/114124374/215930863-2d30d1c5-e98f-45f2-8680-153095f64ff4.png">
 
 - [ERD](https://dbdiagram.io/d/63d9b220296d97641d7d82da)
-- Assumption: Each bin can fall under only one board. Boards can have many pins
-
 <img width="400" alt="Pintwist ERD made using dbDiagram" src="https://user-images.githubusercontent.com/114124374/216207529-5a8829d8-b70b-40bc-86f5-d419523997b7.png">
+
+- Assumption: Each bin can fall under only one board. Boards can have many pins
 
 - [Flowchart](https://docs.google.com/presentation/d/14K_78brmF34xRmJyRNIkDXiTfvUEtoJqHEhZ1VRxHyk/edit?usp=sharing)
 
