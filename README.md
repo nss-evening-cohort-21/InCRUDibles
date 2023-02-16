@@ -19,7 +19,7 @@
 - Private and public pins/boards
 
 ## Video Walkthrough of Pintwist
-https://www.loom.com/share/5ef7fe33711c4e73a703befe41bb85c1
+https://www.loom.com/
 
 
 ## Relevant Links
