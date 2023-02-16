@@ -2,9 +2,9 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { viewPinDetails } from '../../api/mergedData';
 import { Button } from 'react-bootstrap';
 import Link from 'next/link';
+import { viewPinDetails } from '../../api/mergedData';
 
 export default function ViewPin() {
   const [pinDetails, setPinDetails] = useState({});
