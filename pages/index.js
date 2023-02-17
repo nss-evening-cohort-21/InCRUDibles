@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from 'react';
 import { getPins } from '../api/pinData';
 import PinCard from '../components/PinCard';

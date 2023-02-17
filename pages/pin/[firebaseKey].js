@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import { Button } from 'react-bootstrap';
+import Link from 'next/link';
 import { viewPinDetails } from '../../api/mergedData';
 
 export default function ViewPin() {
@@ -33,6 +35,9 @@ export default function ViewPin() {
           <hr />
           <p className="PD-lock">
             {pinDetails.isPublic ? '🔓' : '🔒'}
+            <Link href={`/board/${pinDetails.board_id}`} passHref>
+              <Button variant="outline-dark" className="m-2">Return To Board</Button>
+            </Link>
           </p>
         </div>
       </div>
