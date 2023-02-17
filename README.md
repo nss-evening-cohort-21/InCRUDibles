@@ -19,7 +19,7 @@
 - Private and public pins/boards
 
 ## Video Walkthrough of Pintwist
-https://www.loom.com/
+https://www.loom.com/share/8331fafbc0ef4de49a8f81d9fd316573
 
 
 ## Relevant Links
@@ -31,7 +31,7 @@ https://www.loom.com/
 - [ERD](https://dbdiagram.io/d/63d9b220296d97641d7d82da)
 <img width="400" alt="Pintwist ERD made using dbDiagram" src="https://user-images.githubusercontent.com/114124374/216207529-5a8829d8-b70b-40bc-86f5-d419523997b7.png">
 
-- Assumption: Each bin can fall under only one board. Boards can have many pins
+- Assumption: Each pin can fall under only one board. Boards can have many pins
 
 - [Flowchart](https://docs.google.com/presentation/d/14K_78brmF34xRmJyRNIkDXiTfvUEtoJqHEhZ1VRxHyk/edit?usp=sharing)
 
